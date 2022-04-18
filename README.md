@@ -1,6 +1,6 @@
 # Spotify Song Display
 
-How to show the song on Spotify with ESP32 and e-paper display
+How to show the song which is playing on Spotify with ESP32 and e-paper display.
 
 Building instructions are available on my blog, https://www.sabulo.com/sb/3d-printing-2/spotify-song-display-with-esp32-and-e-paper-display/
 
