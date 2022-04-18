@@ -5,7 +5,7 @@ Spotify parts:
     Tindie: https://www.tindie.com/stores/brianlough/
     Twitter: https://twitter.com/witnessmenow
 
-Other code by Heikki Hietala    
+Other code by Heikki Hietala and respective part websites
  *******************************************************************/
 
 // ----------------------------
@@ -114,10 +114,9 @@ char password[] = "YOUR_PASSWORD"; // your network password
 char clientId[] = "YOUR_CLIENT_ID";     // Your client ID of your spotify APP
 char clientSecret[] = "YOUR_SECRET_ID"; // Your client Secret of your spotify APP (Do Not share this!)
 
-// Country code, including this is advisable
-#define SPOTIFY_MARKET "FI"
+#define SPOTIFY_MARKET "FI"  // Country code, including this is advisable
 
-#define SPOTIFY_REFRESH_TOKEN "YOUR_REFRESH_TOKEN"
+#define SPOTIFY_REFRESH_TOKEN "YOUR_REFRESH_TOKEN" //Your refresher code from the Spotify library sample files
 
 //------- ---------------------- ------
 
@@ -135,14 +134,11 @@ void setup()
 {
   /******************************* START EPAPER SETUP ***************************************/
   display.init();
-
-  // comment out next line to have no or minimal Adafruit_GFX code
-
-  /************************************ END EPAPER SETUP ****************************/
   display.setRotation(1);
   display.fillScreen(GxEPD_WHITE);
   display.setTextColor(GxEPD_BLACK);
   display.setFont(smallfsansbold);
+/************************************ END EPAPER SETUP ****************************/
   display.setCursor(30, 30);
   display.println("Spotify Song Display");
   display.println();
@@ -255,9 +251,6 @@ void printCurrentlyPlayingToSerial(CurrentlyPlaying currentlyPlaying)
   if (mySong != myOldSong) {
     display.drawPaged(drawSpotifyData); // version for AVR using paged drawing, works also on other processors
   }
-
-
-  //delayBetweenRequests = (duration - progress) + 1000;
 
   float percentage = ((float)progress / (float)duration) * 100;
   int clampedPercentage = (int)percentage;
