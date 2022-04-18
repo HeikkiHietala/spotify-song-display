@@ -7,7 +7,7 @@ Building instructions are available on my blog, https://www.sabulo.com/sb/3d-pri
 Code and STL file for printing a box and a stand for the Amazon Echo Dot 
 included here on Github
 
-https://youtube.com/shorts/mzyZR241rJw?feature=share
+See also demo video on https://youtube.com/shorts/mzyZR241rJw?feature=share
 
 ![Screenshot](20220405_094801.jpg)
 
